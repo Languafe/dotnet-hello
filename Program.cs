@@ -17,27 +17,12 @@ namespace Hello
 
             Console.WriteLine("Fibonacci Numbers 1-15:");
 
-            for (int i = 0; i < 15; i++)
+            var generator = new FibonacciGenerator();
+            int index = 0;
+            foreach (var i in generator.Generate(15))
             {
-                Console.WriteLine($"{i + 1}: {FibonacciNumber(i)}");
+                Console.WriteLine($"{++index}: {i}");
             }
         }
-
-        static int FibonacciNumber(int n)
-        {
-            int a = 0;
-            int b = 1;
-            int tmp;
-
-            for (int i = 0; i < n; i++)
-            {
-                tmp = a;
-                a = b;
-                b += tmp;
-            }
-
-            return a;
-        }
-
     }
 }
