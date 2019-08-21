@@ -1,3 +1,3 @@
-# dotnet-hello
+# NewTypes
 
-[Get started with .NET Core on Windows/Linux/macOS using the command line](https://docs.microsoft.com/en-us/dotnet/core/tutorials/using-with-xplat-cli)
+https://docs.microsoft.com/en-us/dotnet/core/tutorials/testing-with-cli
