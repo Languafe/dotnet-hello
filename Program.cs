@@ -1,27 +1,22 @@
 ﻿using System;
+using Pets;
+using System.Collections.Generic;
 
-namespace Hello
+namespace ConsoleApplication
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            if (args.Length > 0)
+            List<IPet> pets = new List<IPet>
             {
-                Console.WriteLine($"Hello {args[0]}!");
-            }
-            else
+                new Dog(),
+                new Cat()  
+            };
+            
+            foreach (var pet in pets)
             {
-                Console.WriteLine("Hello!");
-            }
-
-            Console.WriteLine("Fibonacci Numbers 1-15:");
-
-            var generator = new FibonacciGenerator();
-            int index = 0;
-            foreach (var i in generator.Generate(15))
-            {
-                Console.WriteLine($"{++index}: {i}");
+                Console.WriteLine(pet.TalkToOwner());
             }
         }
     }
